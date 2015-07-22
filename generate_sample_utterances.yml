@@ -21,16 +21,28 @@
       - fourty
       - fourty two
       - fifty six
+      - five hundred
+      - one thousand
+      - six thousand four hundred twenty one
+      - one million
+      - two million three hundred fifteen thousand four hundred sixty two
 
-  - emit: ScoreCheck What is the score
-  - emit: ScoreCheck Who is winning
-  - emit: ResetGame Reset the game
-  - emit: ResetGame Start over
-  - emit: ResetGame Clear the scores
+  - emit: ScoreCheck what is the score
+  - emit: ScoreCheck who is winning
+  - emit: ResetGame reset the game
+  - emit: ResetGame start over
+  - emit: ResetGame clear the scores
 
 - actions:
-   - emit: AddPoint add {<%@$ numbers %>|points} to {<%@ players %>|players}
-   - emit: AddPoint add {<%@$ numbers %>|points} points to {<%@ players %>|players}
-   - emit: AddPoint give {<%@ players %>|players} {<%@$ numbers %>|points} points
-   - emit: AddPoint {<%@$ numbers %>|points} points for {<%@ players %>|players} 
+   - emit: AddPoints give {<%@$ numbers %>|points} points to {<%@ players %>|player} 
+   - emit: AddPoints add {<%@$ numbers %>|points} points to {<%@ players %>|player} 
+   - emit: AddPoints add {<%@$ numbers %>|points} points for {<%@ players %>|player} 
+   - emit: AddPoints {<%@ players %>|player} scored {<%@$ numbers %>|points} points
+   - emit: AddPoints {<%@ players %>|player} scored {<%@$ numbers %>|points}
+   - emit: AddPoints {<%@ players %>|player} gets {<%@$ numbers %>|points} points
+   - emit: AddPoints {<%@ players %>|player} gets {<%@$ numbers %>|points}
+   - emit: AddPoints add a point for {<%@ players %>|player}
+   - emit: AddPoints point for {<%@ players %>|player}
+   - emit: AddPoints score a point for {<%@ players %>|player}
+   - emit: AddPoints score for {<%@ players %>|player}
    - iterate: players

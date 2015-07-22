@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/pmarkert/score_keeper#readme",
   "dependencies": {
-    "alexa_router": "0.0.3"
+    "alexa_router": "0.0.3",
+    "async": "^1.4.0",
+    "aws-sdk": "^2.1.39",
+    "underscore": "^1.8.3"
   }
 }
