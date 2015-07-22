@@ -1,0 +1,19 @@
+{
+  "intents": [
+    { "intent": "ScoreCheck"},
+    { "intent": "ResetGame"},
+    {
+      "intent": "AddPoints",
+      "slots": [
+        {
+          "name": "player",
+          "type": "LITERAL"
+        },
+        {
+          "name": "points",
+          "type": "NUMBER"
+        }
+      ]
+    }
+  ]
+}

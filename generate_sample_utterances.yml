@@ -1,0 +1,36 @@
+#!/usr/bin/env hyperpotamus
+- actions:
+  - set:
+     players:
+      - phillip
+      - ryan
+      - james
+      - gabriel
+     numbers:
+      - one
+      - three
+      - five
+      - ten
+      - eleven
+      - twelve
+      - fourteen
+      - twenty
+      - twenty one
+      - thirty
+      - thirty three
+      - fourty
+      - fourty two
+      - fifty six
+
+  - emit: ScoreCheck What is the score
+  - emit: ScoreCheck Who is winning
+  - emit: ResetGame Reset the game
+  - emit: ResetGame Start over
+  - emit: ResetGame Clear the scores
+
+- actions:
+   - emit: AddPoint add {<%@$ numbers %>|points} to {<%@ players %>|players}
+   - emit: AddPoint add {<%@$ numbers %>|points} points to {<%@ players %>|players}
+   - emit: AddPoint give {<%@ players %>|players} {<%@$ numbers %>|points} points
+   - emit: AddPoint {<%@$ numbers %>|points} points for {<%@ players %>|players} 
+   - iterate: players
